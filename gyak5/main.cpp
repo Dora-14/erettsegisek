@@ -2,17 +2,21 @@
 
 using namespace std;
 
-int identice(long n){
-       int i=n%10,ok=1;
-       while(n!=0){
-         if(n%10!=i)
-            ok=0;
-         n=n/10;
-   }
-  return ok;
-}
 int main()
 {
-    cout<<identice(2222);
+   int  n, m, a[100][100], i, j;
+   cout<<"n=";
+   cin >> n;
+   cout<<"m=";
+   cin>>m;
+   for(i=1; i<=m;i++)
+    for(j=1; j<=n; j++)
+    a[i][j]=i*j%10;
+    for(i=1; i<=m; i++){
+        for(j=1; j<=n; j++)
+        cout<<a[i][j]<<" ";
+        cout<<endl;
+
+    }
     return 0;
 }
